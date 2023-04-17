@@ -8,13 +8,13 @@ type Props = {};
 
 const HeaderSection = (props: Props) => {
   return (
-    <header>
-      <div className="flex justify-between mb-20 container mx-auto max-w-screen-xl px-5 md:px-0 py-14">
-        <Image src="/images/logo.svg" alt="logo-img" width={180} height={96} />
+    <div>
+      <header className="flex justify-between mb-20 container mx-auto max-w-screen-xl px-5 md:px-0 py-14">
+        <Image src="/images/logo.svg" alt="logo-img" width={240} height={39} className="w-[160px] h-[28px]"/>
         <button className="text-pink outline outline-offset-2 outline-1 rounded-full px-6 py-1 outline-pink">
           Try Free
         </button>
-      </div>
+      </header>
       <div className="container mx-auto max-w-screen-xl">
         <div className="px-5 mb-20">
           <h1 className="md:text-4xl text-3xl text-center text-veryDarkCyan font-bold mb-5">
@@ -36,6 +36,7 @@ const HeaderSection = (props: Props) => {
           alt="top1-img"
           width={800}
           height={800}
+          priority
           className="mx-auto mb-20"
         />
         <div className="hidden md:flex justify-around">
@@ -45,6 +46,7 @@ const HeaderSection = (props: Props) => {
               alt="top1-img"
               width={35}
               height={35}
+              className="w-[42px] h-[42px]"
             />
             <span className="text-6xl text-veryDarkCyan font-bold">1.4k+</span>
             <p className="text-center">Messages Sent</p>
@@ -55,6 +57,7 @@ const HeaderSection = (props: Props) => {
               alt="top1-img"
               width={35}
               height={35}
+              className="w-[42px] h-[42px]"
             />
             <span className="text-6xl text-veryDarkCyan font-bold">2.7m+</span>
             <p className="text-center">Communities Formed</p>
@@ -173,7 +176,9 @@ const HeaderSection = (props: Props) => {
       <article className="bg-slate-50">
         <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto max-w-screen-xl">
           <div className="flex flex-col gap-y-4 justify-center px-5 md:pr-28 row-start-2 row-end-3 md:row-start-1 md:row-end-2">
-            <h3 className="text-veryDarkCyan text-center md:text-left font-bold text-2xl">Your Users</h3>
+            <h3 className="text-veryDarkCyan text-center md:text-left font-bold text-2xl">
+              Your Users
+            </h3>
             <p className="text-center md:text-left">
               It takes no time at all to integrate Huddle with your app&apos;s
               authentication solution. This means, once signed in to your app,
@@ -281,7 +286,7 @@ const HeaderSection = (props: Props) => {
           </div>
         </div>
       </footer>
-    </header>
+    </div>
   );
 };
 
